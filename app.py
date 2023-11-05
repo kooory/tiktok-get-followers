@@ -3,7 +3,7 @@ import json
 import random
 
 # Get your personal ScrapTubes Key from https://rapidapi.com/SteveJobsnihack/api/scraptubes
-scraptubes_key = "ENTER YOUR KEY HERE"
+scraptubes_key = "6a2af77679mshec9df33198ad017p13d06cjsn9a54d07267e8"
 
 url = "https://scraptubes.p.rapidapi.com/register/device"
 
@@ -11,7 +11,7 @@ payload = { "proxy": "" }
 headers = {
 	"content-type": "application/json",
 	"Content-Type": "application/json",
-	"X-RapidAPI-Key": scraptubes_key,
+	"X-RapidAPI-Key": 6a2af77679mshec9df33198ad017p13d06cjsn9a54d07267e8,
 	"X-RapidAPI-Host": "scraptubes.p.rapidapi.com"
 }
 
@@ -44,7 +44,7 @@ def scrape_followers(userid: str):
                 headers = {
                     "content-type": "application/json",
 	                "Content-Type": "application/json",
-	                "X-RapidAPI-Key": scraptubes_key,
+	                "X-RapidAPI-Key": 6a2af77679mshec9df33198ad017p13d06cjsn9a54d07267e8,
 	                "X-RapidAPI-Host": "scraptubes.p.rapidapi.com"
                 }
 
@@ -52,10 +52,10 @@ def scrape_followers(userid: str):
                 data = result.json()
 
                 for follower in data['followers']:
-                    print('Nickname: {}'.format(follower['nickname']))
+                    print('Nickname: {}'.format(follower['ahmed222554']))
 
                     with open('users.txt', 'a', encoding='utf-8') as f:
-                        f.write('{}\n'.format(follower['nickname']))
+                        f.write('{}\n'.format(follower['ahmed222554']))
 
                 if data['has_more']:
                     max_time = data['min_time']
